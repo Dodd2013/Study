@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "webpack"
+    "test": "webpack-dev-server"
   },
   "author": "Dodd",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^1.14.0"
+    "json-loader": "^0.5.4",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   }
 }
