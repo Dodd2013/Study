@@ -10,5 +10,11 @@ module.exports = {
 		colors: true, //终端中输出结果为彩色
 		historyApiFallback: true, //不跳转
 		inline: true //实时刷新
-	}
+	},
+	module: { //在配置文件里添加JSON loader
+		loaders: [{
+			test: /\.json$/,
+			loader: "json"
+		}]
+	},
 }
