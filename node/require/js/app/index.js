@@ -1,5 +1,4 @@
-require(['jquery'],function() {
+require(['jquery','bootstrap'],function() {
     var $=require('jquery');
-    console.log($);
 });
 
