@@ -1,0 +1,22 @@
+{
+  "name": "require",
+  "homepage": "https://github.com/Dodd2013/Study",
+  "authors": [
+    "Dodd <291106637@qq.com>"
+  ],
+  "description": "study requirejs",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "js/lib"
+  ],
+  "dependencies": {
+    "jquery": "1.12.4",
+    "requirejs": "2.3.2"
+  }
+}

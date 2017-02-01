@@ -7,13 +7,8 @@ requirejs.config({
     //never includes a ".js" extension since
     //the paths config could be for a directory.
     paths: {
-        app: '../app'
+        app: '../app',
+        common:'../common',
+        jquery:'jquery/dist/jquery'
     }
-});
-
-// Start the main app logic.
-requirejs(['jquery', 'canvas', 'app/sub'],
-function   ($,        canvas,   sub) {
-    //jQuery, canvas and the app/sub module are all
-    //loaded and can be used here now.
 });
