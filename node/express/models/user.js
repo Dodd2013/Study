@@ -16,5 +16,9 @@ module.exports = {
     passWord:{
     	type:Sequelize.STRING,
     	allowNull: false
+    },
+    roles:{
+    	type:Sequelize.STRING,
+    	allowNull: true
     }
 }
