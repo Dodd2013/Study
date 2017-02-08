@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    body.container-fluid {
+        padding: 0;
+        background: #fff;
+        font: normal 12px/22px 宋体;
+    }
+    
+    img {
+        border: 0;
+    }
+    
+    .header-logo {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .hottel {
+        color: #7fb275
+    }
+    
+    .searchform {
+        display: inline;
+    }
+    
+    .searchbtn {
+    	background-color: #d3d3d3;
+    	border: 0px;
+    	width: 22px;
+    }
+    .serachinput{
+    	border:1px;
+    	background-color: #f4f4f4;
+    	box-shadow: inset 0px 1px 5px 0px rgba(4, 0, 0, 0.078);
+    }
+
+    .language {
+        margin-bottom: 10px;
+    }
+    
+    .mynavbar {
+        /*     	padding-bottom: 10px;
+    	padding-top: 10px; */
+        color: #FFFFFF;
+        line-height: 48px;
+        background: url('nav.png') repeat-x;
+    }
+    
+    .navli {
+        width: 11.1%;
+        display: inline-block;
+        /* 		border-right: solid 1px #FFFFFF;
+		border-left: solid 1px #FFFFFF; */
+    }
+    
+    .navli:hover {
+        background: url('navactive.png');
+    }
+    
+    .navul .active {
+        background: url('navactive.png');
+    }
+    
+    .navul {
+        width: 100%;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    .mynavbar a {
+        text-decoration: none;
+        display: block;
+    }
+    
+    .mynavbar a:link {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    /* 未被访问的链接     */
+    
+    .mynavbar a:visited {
+        color: #FFFFFF
+    }
+    /* 已被访问过的链接    */
+    
+    .mynavbar a:hover {
+        text-decoration: none;
+    }
+    /* 鼠标悬浮在上的链接  */
+    
+    .mynavbar a:active {
+        color: #FFFFFF
+    }
+    /* 鼠标点中激活链接    */
+    /* 本例子css */
+    
+    .slideBox {
+        width: 100%;
+        height: 430px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #ddd;
+    }
+    
+    .slideBox .hd {
+        position: absolute;
+        right: 50%;
+        bottom: 5px;
+        z-index: 1;
+    }
+    
+    .slideBox .hd ul {
+    	position:relative;
+    	left:50%;
+        zoom: 1;
+    }
+    
+    .slideBox .hd ul li {
+    	display: inline-block;
+        margin-right: 2px;
+        width: 80px;
+        height: 14px;
+        line-height: 14px;
+        text-align: center;
+        background: #044c98;
+        cursor: pointer;
+    }
+    
+    .slideBox .hd ul li.on {
+        background: #6ccc39;
+        color: #fff;
+    }
+    
+    .slideBox .bd {
+        position: relative;
+        height: 100%;
+        z-index: 0;
+    }
+    
+    .slideBox .bd li {
+        zoom: 1;
+        vertical-align: middle;
+    }
+    
+    .slideBox .bd img {
+        width: 100%;
+        height: 430px;
+        display: block;
+    }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <div class="container header-logo">
+            <div class="row">
+                <div class="col-sm-7">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <div class="col-sm-5">
+                    <div class="row pull-right language">
+                        中文 &nbsp|&nbsp English
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row pull-right">
+                        <span class="hottel">热线电话:</span>400-088-9070
+                        <form class="searchform" action="search" method="get" accept-charset="utf-8">
+                            <input class="serachinput" type="text" name="" value="" placeholder="">
+                            <button type="submit" class="searchbtn"><span class="glyphicon glyphicon-search"></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mynavbar">
+            <nav class="container">
+                <ul class="navul text-center">
+                    <span>|</span>
+                    <li class="navli active"><a href="##">网站首页</a></li><span>|</span>
+                    <li class="navli"><a href="##">关于我们</a></li><span>|</span>
+                    <li class="navli"><a href="##">产品中心</a></li><span>|</span>
+                    <li class="navli"><a href="##">采购清单</a></li><span>|</span>
+                    <li class="navli"><a href="##">新闻中心</a></li><span>|</span>
+                    <li class="navli"><a href="##">荣誉资质</a></li><span>|</span>
+                    <li class="navli"><a href="##">联系方式</a></li><span>|</span>
+                    <li class="navli"><a href="##">公司相册</a></li><span>|</span>
+                </ul>
+            </nav>
+        </div>
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li>
+                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="banner1.png" /></a>
+                    </li>
+                    <li>
+                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="banner1.png" /></a>
+                    </li>
+                    <li>
+                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="banner1.png" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+        jQuery(".slideBox").slide({
+            mainCell: ".bd ul",
+            autoPlay: true
+        });
+        </script>
+    </header>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
