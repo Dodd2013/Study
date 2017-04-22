@@ -1,3 +1,4 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	devtool: 'eval-source-map', //配置生成Source Maps，选择合适的选项
 	entry: __dirname + "/app/main.js", //已多次提及的唯一入口文件
@@ -17,4 +18,5 @@ module.exports = {
 			loader: "json"
 		}]
 	},
+	plugins: [new HtmlWebpackPlugin()]
 }
