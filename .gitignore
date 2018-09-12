@@ -1,3 +1,5 @@
 node_modules
 *.exe
 .idea
+C/codeforces/.vscode/launch.json
+C/codeforces/.vscode/tasks.json
